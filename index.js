@@ -42,7 +42,7 @@ const client = new MongoClient(process.env.MONGODB_URI, {
 
 const verifyFirebaseToken = async (req, res, next) => {
   const authHeader = req.headers.authorization;
-  console.log("🚀 ~ verifyFirebaseToken ~ authHeader:", authHeader);
+  console.log(" ~ verifyFirebaseToken ~ authHeader:", authHeader);
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return res.status(401).json({ message: "Unauthorized: No token provided" });
